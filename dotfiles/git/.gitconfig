@@ -1,0 +1,58 @@
+[include]
+  path = ~/.git_aliases
+  path = ~/.git_local
+  path = ~/.git_perso
+
+[color]
+  ui = auto
+
+[core]
+  autocrlf = input
+  editor = code
+  trustctime = false
+  untrackedCache = true
+  excludesfile = ~/.git_ignore
+
+[credential]
+  helper = osxkeychain
+
+[gpg]
+  program = /usr/local/bin/gpg
+
+[branch]
+  autosetuprebase = always
+
+[commit]
+  gpgsign = true
+
+[diff]
+  tool = vscode
+
+[difftool]
+  prompt = false
+
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+
+[fetch]
+  prune = true
+
+[merge]
+  log = true
+  tool = vscode
+
+[mergetool]
+  prompt = false
+
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+
+[pull]
+  rebase = true
+
+[push]
+  default = current
+  followTags = true
+
+[rebase]
+  autosquash = true
