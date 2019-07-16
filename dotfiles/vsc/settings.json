@@ -1,0 +1,22 @@
+{
+    "editor.fontFamily": "MesloLGL Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 15,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveTimeout": 250,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "explorer.confirmDelete": true,
+    "explorer.confirmDragAndDrop": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "underline",
+    "terminal.integrated.fontFamily": "MesloLGL Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "file-icons-colourless",
+    "workbench.startupEditor": "none",
+    "workbench.statusBar.feedback.visible": false,
+    "workbench.tips.enabled": false
+}
