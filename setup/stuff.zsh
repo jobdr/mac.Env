@@ -2,9 +2,9 @@
 
 BREW_LIST="$VROOM/stuff/brew.list"
 CASK_LIST="$VROOM/stuff/cask.list"
-CODE_LIST="$VROOM/stuff/code.list"
 MAS_LIST="$VROOM/stuff/mas.list"
 TAP_LIST="$VROOM/stuff/tap.list"
+VSC_LIST="$VROOM/stuff/vsc.list"
 
 function stuff:brew () {
   while read FORMULAE
@@ -40,24 +40,6 @@ function stuff:cask () {
       fi
     fi
   done < $CASK_LIST
-}
-
-function stuff:code () {
-  while read EXTENSION
-  do
-    if [ "$(code --list-extensions -- | grep -E "(^|\s)$EXTENSION($|\s)")" ]
-    then
-      echo -e "\e[1;32m✓\e[0m \e[1m$EXTENSION:\e[0m \e[37malready done!\e[0m"
-    else
-      code --install-extension $EXTENSION &> /dev/null
-      if [ "$(code --list-extensions -- | grep -E "(^|\s)$EXTENSION($|\s)")" ]
-      then
-        echo -e "\e[1;32m✓\e[0m \e[1m$EXTENSION:\e[0m \e[37minstalled!\e[0m"
-      else
-        echo -e "\e[1;31m✗\e[0m \e[1m$EXTENSION:\e[0m \e[37mfailed!\e[0m"
-      fi
-    fi
-  done < $CODE_LIST
 }
 
 function stuff:mas () {
@@ -98,11 +80,29 @@ function stuff:tap () {
   done < $TAP_LIST
 }
 
+function stuff:vsc () {
+  while read EXTENSION
+  do
+    if [ "$(code --list-extensions -- | grep -E "(^|\s)$EXTENSION($|\s)")" ]
+    then
+      echo -e "\e[1;32m✓\e[0m \e[1m$EXTENSION:\e[0m \e[37malready done!\e[0m"
+    else
+      code --install-extension $EXTENSION &> /dev/null
+      if [ "$(code --list-extensions -- | grep -E "(^|\s)$EXTENSION($|\s)")" ]
+      then
+        echo -e "\e[1;32m✓\e[0m \e[1m$EXTENSION:\e[0m \e[37minstalled!\e[0m"
+      else
+        echo -e "\e[1;31m✗\e[0m \e[1m$EXTENSION:\e[0m \e[37mfailed!\e[0m"
+      fi
+    fi
+  done < $VSC_LIST
+}
+
 function stuff:all ()
 {
   stuff:tap
   stuff:brew
   stuff:cask
-  stuff:code
   stuff:mas
+  stuff:vsc
 }
