@@ -6,7 +6,8 @@ MAS_LIST="$VROOM/stuff/mas.list"
 TAP_LIST="$VROOM/stuff/tap.list"
 VSC_LIST="$VROOM/stuff/vsc.list"
 
-function stuff:brew () {
+function stuff:brew ()
+{
   while read FORMULAE
   do
     if [ "$(brew list -- | grep -E "(^|\s)$FORMULAE($|\s)")" ]
@@ -24,7 +25,8 @@ function stuff:brew () {
   done < $BREW_LIST
 }
 
-function stuff:cask () {
+function stuff:cask ()
+{
   while read CASK
   do
     if [ "$(brew cask list -- | grep -E "(^|\s)$CASK($|\s)")" ]
@@ -42,7 +44,8 @@ function stuff:cask () {
   done < $CASK_LIST
 }
 
-function stuff:mas () {
+function stuff:mas ()
+{
   while read APP
   do
     APP_ID=$(echo $APP | awk '{ print $1 }')
@@ -62,7 +65,8 @@ function stuff:mas () {
   done < $MAS_LIST
 }
 
-function stuff:tap () {
+function stuff:tap ()
+{
   while read TAP
   do
     if [ "$(brew tap -- | grep -E "(^|\s)$TAP($|\s)")" ]
@@ -80,7 +84,8 @@ function stuff:tap () {
   done < $TAP_LIST
 }
 
-function stuff:vsc () {
+function stuff:vsc ()
+{
   while read EXTENSION
   do
     if [ "$(code --list-extensions -- | grep -E "(^|\s)$EXTENSION($|\s)")" ]
