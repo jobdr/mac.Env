@@ -8,7 +8,7 @@
 
 [core]
   autocrlf = input
-  editor = code
+  editor = vim
   trustctime = false
   untrackedCache = true
   excludesfile = ~/.git_ignore
