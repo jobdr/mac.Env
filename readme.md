@@ -101,7 +101,7 @@ Here are the commands to perform from time to time on your machine.
 # Homebrew
 brew update
 brew upgrade
-brew cask upgrade
+brew cask upgrade # (--greedy if you want to force updates)
 brew doctor
 brew cleanup -s
 rm -rf "$(brew --cache)"
