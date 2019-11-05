@@ -9,7 +9,7 @@ VSC_LIST="$VROOM/stuff/vsc.list"
 function backup:brew ()
 {
   : > $BREW_LIST
-  brew cask list >> $BREW_LIST
+  brew list >> $BREW_LIST
   echo -e "\e[1;32m✓\e[0m \e[1mHomebrew formulaes:\e[0m \e[37msaved in brew.list\e[0m"
 }
 
