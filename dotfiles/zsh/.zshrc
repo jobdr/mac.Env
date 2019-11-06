@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+export PATH="/usr/local/sbin:$PATH"
+
 setopt NO_BEEP
 
 DISABLE_AUTO_UPDATE="true"
