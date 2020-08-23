@@ -1,12 +1,25 @@
 #!/usr/bin/env zsh
 
+alias _="sudo"
+
 alias cl="clear"
 alias ex="exit"
 
 alias git="hub"
 alias rm="trash"
 
-alias _="sudo"
+alias os-hidden-hide="defaults write com.apple.finder AppleShowAllFiles -bool false && refresh"
+alias os-desktop-show="defaults write com.apple.finder CreateDesktop -bool true && refresh"
+alias os-desktop-hide="defaults write com.apple.finder CreateDesktop -bool false && refresh"
+
+alias allo="ping -c 3 www.google.com"
+alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
+alias hosts="sudo e /etc/hosts"
+alias path="echo -e ${PATH//:/\\n}"
+alias reload="exec $SHELL -l"
+alias rmds="find . -type f -name '*.DS_Store' -ls -delete"
+alias prefs=". $SETUP/_functions/prefs.zsh"
+
 alias c="composer"
 alias d="docker"
 alias dc="docker-compose"
@@ -24,23 +37,10 @@ alias desktop="cd $DESKTOP"
 alias downloads="cd $DOWNLOADS"
 alias projects="cd $PROJECTS"
 alias sandbox="cd $SANDBOX"
-alias vroom="cd $VROOM"
+alias setup="cd $SETUP"
 
 alias _desktop="e $DESKTOP"
 alias _downloads="e $DOWNLOADS"
 alias _projects="e $PROJECTS"
 alias _sandbox="e $SANDBOX"
-alias _vroom="e $VROOM"
-
-alias os-lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-alias os-sleep="osascript -e 'tell application \"System Events\" to sleep'"
-alias os-hidden-show="defaults write com.apple.finder AppleShowAllFiles -bool true && refresh"
-alias os-hidden-hide="defaults write com.apple.finder AppleShowAllFiles -bool false && refresh"
-alias os-desktop-show="defaults write com.apple.finder CreateDesktop -bool true && refresh"
-alias os-desktop-hide="defaults write com.apple.finder CreateDesktop -bool false && refresh"
-
-alias allo="ping -c 3 www.google.com"
-alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
-alias hosts="sudo e /etc/hosts"
-alias path="echo -e ${PATH//:/\\n}"
-alias reload="exec $SHELL -l"
+alias _setup="e $SETUP"

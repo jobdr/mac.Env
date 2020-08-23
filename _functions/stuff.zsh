@@ -1,10 +1,10 @@
 #!/usr/bin/env zsh
 
-BREW_LIST="$VROOM/stuff/brew.list"
-CASK_LIST="$VROOM/stuff/cask.list"
-MAS_LIST="$VROOM/stuff/mas.list"
-TAP_LIST="$VROOM/stuff/tap.list"
-VSC_LIST="$VROOM/stuff/vsc.list"
+BREW_LIST=$SETUP/backup/brew.list
+CASK_LIST=$SETUP/backup/cask.list
+MAS_LIST=$SETUP/backup/mas.list
+TAP_LIST=$SETUP/backup/tap.list
+VSC_LIST=$SETUP/backup/vsc.list
 
 function stuff:brew ()
 {

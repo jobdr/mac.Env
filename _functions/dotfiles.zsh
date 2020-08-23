@@ -1,8 +1,8 @@
 #!/usr/bin/env zsh
 
-GIT_DOTFILES=$VROOM/dotfiles/git
-VSC_DOTFILES=$VROOM/dotfiles/vsc
-ZSH_DOTFILES=$VROOM/dotfiles/zsh
+GIT_DOTFILES=$SETUP/dotfiles/git
+VSC_DOTFILES=$SETUP/dotfiles/vsc
+ZSH_DOTFILES=$SETUP/dotfiles/zsh
 
 function symlink () {
   SRC=$1
@@ -48,8 +48,8 @@ function dotfiles:vsc ()
 {
   for FILE in $(ls -A1 $VSC_DOTFILES)
   do
-    SRC="$VSC_DOTFILES/$FILE"
-    DST="$HOME/Library/Application Support/Code/User/$FILE"
+    SRC=$VSC_DOTFILES/$FILE
+    DST=$HOME/Library/Application Support/Code/User/$FILE
     symlink $SRC $DST $FILE
   done
 }
@@ -58,8 +58,8 @@ function dotfiles:zsh ()
 {
   for FILE in $(ls -A1 $ZSH_DOTFILES)
   do
-    SRC="$ZSH_DOTFILES/$FILE"
-    DST="$HOME/$FILE"
+    SRC=$ZSH_DOTFILES/$FILE
+    DST=$HOME/$FILE
     symlink $SRC $DST $FILE
   done
 }

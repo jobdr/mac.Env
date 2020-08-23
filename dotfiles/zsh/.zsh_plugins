@@ -1,0 +1,49 @@
+#!/usr/bin/env zsh
+
+. /usr/local/share/antigen/antigen.zsh
+
+antigen use oh-my-zsh
+
+antigen bundles <<EOBUNDLES
+  zsh-users/zsh-autosuggestions
+  zsh-users/zsh-completions
+  zsh-users/zsh-syntax-highlighting
+  denysdovhan/spaceship-prompt
+EOBUNDLES
+
+antigen apply
+
+# Time
+# https://github.com/denysdovhan/spaceship-prompt/blob/master/docs/Options.md#time-time
+SPACESHIP_TIME_SHOW="true"
+SPACESHIP_TIME_COLOR="255"
+SPACESHIP_TIME_SUFFIX=" • "
+
+# User
+# https://github.com/denysdovhan/spaceship-prompt/blob/master/docs/Options.md#username-user
+SPACESHIP_USER_SHOW="always"
+SPACESHIP_USER_PREFIX=""
+SPACESHIP_USER_COLOR="004"
+
+# Directory
+# https://github.com/denysdovhan/spaceship-prompt/blob/master/docs/Options.md#directory-dir
+SPACESHIP_DIR_TRUNC_PREFIX="../"
+
+# Git
+# https://github.com/denysdovhan/spaceship-prompt/blob/master/docs/Options.md#git-git
+SPACESHIP_GIT_BRANCH_COLOR="045"
+
+# Order
+# https://github.com/denysdovhan/spaceship-prompt/blob/master/docs/Options.md#order
+SPACESHIP_PROMPT_ORDER=(
+  time
+  user
+  dir
+  host
+  git
+  exec_time
+  line_sep
+  jobs
+  exit_code
+  char
+)

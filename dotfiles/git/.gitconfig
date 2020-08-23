@@ -3,21 +3,21 @@
   path = ~/.git_local
   path = ~/.git_perso
 
-[color]
-  ui = auto
-
-[core]
-  autocrlf = input
-  editor = vim
-  trustctime = false
-  untrackedCache = true
-  excludesfile = ~/.git_ignore
-
 [credential]
   helper = osxkeychain
 
 [gpg]
   program = /usr/local/bin/gpg
+
+[core]
+  excludesfile = ~/.git_ignore
+  autocrlf = input
+  editor = vim
+  trustctime = false
+  untrackedCache = true
+
+[color]
+  ui = auto
 
 [branch]
   autosetuprebase = always

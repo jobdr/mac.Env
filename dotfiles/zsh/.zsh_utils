@@ -1,36 +1,8 @@
 #!/usr/bin/env zsh
 
-function fs ()
-{
-  if du -b /dev/null > /dev/null 2>&1
-  then
-    local arg=-sbh
-  else
-    local arg=-sh
-  fi
-
-  if [[ -n "$@" ]] then
-    du $arg -- "$@"
-  else
-    du $arg .[^.]* ./*
-  fi
-}
-
 function mcd ()
 {
   mkdir -p -- "$@" && cd -- "$@"
-}
-
-function myip ()
-{
-  myip=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
-  echo $myip
-}
-
-function please ()
-{
-  CMD=$(history -1 | cut -d" " -f4-)
-  sudo "$CMD"
 }
 
 function refresh ()
@@ -40,16 +12,10 @@ function refresh ()
   killall Dock Finder SystemUIServer NotificationCenter
 }
 
-function rmds ()
-{
-  sudo find / -name ".DS_Store" -delete
-  killall Finder
-}
-
 function showcolors ()
 {
-  for code in {000..255}
+  for i in {0..255}
   do
-    print -nP -- "%F{$code}$code %f"; [ $((${code} % 16)) -eq 15 ] && echo
+    print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}
   done
 }

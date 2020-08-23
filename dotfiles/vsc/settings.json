@@ -1,5 +1,5 @@
 {
-  "editor.fontFamily": "MesloLGL Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "Fira Code, Monaco, 'Courier New', monospace",
   "editor.fontSize": 15,
   "editor.formatOnSave": true,
   "editor.formatOnSaveTimeout": 250,
@@ -13,10 +13,15 @@
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "underline",
-  "terminal.integrated.fontFamily": "MesloLGL Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontFamily": "MesloLGS Nerd Font, Menlo, Monaco, 'Courier New', monospace",
   "workbench.colorTheme": "Dracula",
-  "workbench.iconTheme": "file-icons-colourless",
   "workbench.startupEditor": "none",
   "workbench.statusBar.feedback.visible": false,
-  "workbench.tips.enabled": false
+  "workbench.tips.enabled": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "vetur.format.defaultFormatter.css": "none",
+  "window.zoomLevel": -1,
+  "php.validate.enable": false,
+  "workbench.iconTheme": "file-icons"
 }
