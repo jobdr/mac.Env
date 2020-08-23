@@ -7,7 +7,7 @@
 Download on the `App Store` and get your apps.
 
 ```bash
-export SPATH="$HOME/Setup"
+export SETUP="$HOME/Setup"
 
 # Ask for admin password
 sudo -v
@@ -29,7 +29,7 @@ sudo xcodebuild -license
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Setup
-git clone https://github.com/jobdr/macos.setup.git $SPATH
+git clone https://github.com/jobdr/macos.setup.git $SETUP
 for FILE in $SETUP/_functions/*; do source $FILE; done
 
 # Stuff
