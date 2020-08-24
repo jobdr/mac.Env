@@ -40,6 +40,7 @@
   "workbench.statusBar.feedback.visible": false,
   "workbench.tips.enabled": false,
   "eslint.alwaysShowStatus": true,
+  "intelephense.format.enable": false,
   "prettier.requireConfig": true,
   "vetur.format.defaultFormatter.css": "none",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
