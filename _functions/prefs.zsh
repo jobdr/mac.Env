@@ -333,7 +333,7 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 defaults write com.apple.dock autohide -bool false
 
 # Make Dock icons of hidden applications translucent
-defaults write com.apple.dock showhidden -bool true
+defaults write com.apple.dock showhidden -bool false
 
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
